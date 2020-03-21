@@ -13,4 +13,10 @@ public class User {
 
     private Long id;
     private String userName;
+    private Integer age;
+    private Integer version;
+    private Date gmtCreate;
+    private Date gmtModify;
+
+
 }
