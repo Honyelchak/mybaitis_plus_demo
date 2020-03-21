@@ -95,7 +95,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 }
 ```
 
-###乐观锁
+### 乐观锁
 乐观锁实现方式：
 - 取出记录时，获取当前 version
 - 更新时，带上这个version
@@ -251,6 +251,22 @@ void testWapper(){
 
 AutoGenerator 是 MyBatis-Plus 的代码生成器，通过 AutoGenerator 可以快速生成 Entity、
 Mapper、Mapper XML、Service、Controller 等各个模块的代码，极大的提升了开发效率。
+
+导入POM.xml文件：
+```xml
+<!--mybatis-plus从 3.0.3 之后移除了代码生成器与模板引擎的默认依赖，需要手动添加相关依赖：-->
+<dependency>
+    <groupId>com.baomidou</groupId>
+    <artifactId>mybatis-plus-generator</artifactId>
+    <version>3.3.1.tmp</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity-engine-core</artifactId>
+    <version>2.2</version>
+</dependency>
+```
+
 
 ```java
 public class CodeGenrator {
